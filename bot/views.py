@@ -76,9 +76,10 @@ def referral_summary_view(request, telegram_id):
 
     referrals_qs = referrer.referrals.order_by("-created_at")
 
-    last_5 = referrals_qs[:5]
-
     return Response({
         "count": referrals_qs.count(),
-        "last_5_referrals": serializers.ReferralItemSerializer(last_5, many=True).data
+        "last_5_referrals": serializers.ReferralItemSerializer(
+            referrals_qs[:5],
+            many=True
+        ).data
     })
