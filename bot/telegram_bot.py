@@ -9,5 +9,6 @@ def start_bot():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("my_status", my_status))
+    app.add_handler(CommandHandler(("ref_summary", my_status)))
     print("Bot is running...")
     app.run_polling()
