@@ -2,6 +2,7 @@ anyio==4.12.1
 asgiref==3.11.0
 certifi==2026.1.4
 Django==5.2.1
+djangorestframework==3.16.1
 environs==14.5.0
 h11==0.16.0
 httpcore==1.0.9
