@@ -12,3 +12,8 @@ class TelegramUser(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class PriceLog(models.Model):
+    value = models.FloatField()
+    created_at = models.DateTimeField(auto_now_add=True)
