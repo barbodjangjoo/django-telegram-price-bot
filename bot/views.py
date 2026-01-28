@@ -66,3 +66,19 @@ def telegram_user_status_view(request, telegram_id):
 
     serializer = serializers.TelegramUserStatusSerializer(user)
     return Response(serializer.data)
+
+@api_view(["GET"])
+def referral_summary_view(request, telegram_id):
+    referrer = get_object_or_404(
+        TelegramUser,
+        telegram_id=telegram_id
+    )
+
+    referrals_qs = referrer.referrals.order_by("-created_at")
+
+    last_5 = referrals_qs[:5]
+
+    return Response({
+        "count": referrals_qs.count(),
+        "last_5_referrals": serializers.ReferralItemSerializer(last_5, many=True).data
+    })

@@ -47,3 +47,12 @@ class TelegramUserStatusSerializer(serializers.ModelSerializer):
 
     def get_referrer_telegram_id(self, obj):
         return obj.referred_by.telegram_id if obj.referred_by else None
+    
+
+class ReferralItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TelegramUser
+        fields = (
+            "telegram_id",
+            "created_at",
+        )
