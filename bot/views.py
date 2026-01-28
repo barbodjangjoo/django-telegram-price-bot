@@ -56,3 +56,13 @@ def create_referral_view(request):
         "created_at": referred.updated_at
     }, status=status.HTTP_201_CREATED)
 
+
+@api_view(["GET"])
+def telegram_user_status_view(request, telegram_id):
+    user = get_object_or_404(
+        TelegramUser.objects.select_related("referred_by"),
+        telegram_id=telegram_id
+    )
+
+    serializer = serializers.TelegramUserStatusSerializer(user)
+    return Response(serializer.data)
