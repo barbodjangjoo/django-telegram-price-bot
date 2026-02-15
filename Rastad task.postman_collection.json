@@ -1,0 +1,580 @@
+{
+  "info": {
+    "_postman_id": "6e1ee876-e9fa-4375-90ce-abde8ce6bb30",
+    "name": "Rastad task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39331284"
+  },
+  "item": [
+    {
+      "name": "users/upsert/",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "telegram_id",
+              "value": "390421865",
+              "type": "text",
+              "uuid": "b0cf62b7-fa5d-49fe-bbe9-42722c54547d"
+            },
+            {
+              "key": "username",
+              "value": "barbod",
+              "type": "text",
+              "uuid": "0f5bbb41-779a-4564-b406-343207ef44a8"
+            },
+            {
+              "key": "first_name",
+              "value": "barbod",
+              "type": "text",
+              "uuid": "310de35a-90ee-407d-8eeb-0acded236e05"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{Base_Url}}/api/bot/users/upsert/",
+          "host": [
+            "{{Base_Url}}"
+          ],
+          "path": [
+            "api",
+            "bot",
+            "users",
+            "upsert",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "users/upsert/",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "telegram_id",
+                  "value": "390421865",
+                  "type": "text",
+                  "uuid": "b0cf62b7-fa5d-49fe-bbe9-42722c54547d"
+                },
+                {
+                  "key": "username",
+                  "value": "barbod",
+                  "type": "text",
+                  "uuid": "0f5bbb41-779a-4564-b406-343207ef44a8"
+                },
+                {
+                  "key": "first_name",
+                  "value": "barbod",
+                  "type": "text",
+                  "uuid": "310de35a-90ee-407d-8eeb-0acded236e05"
+                }
+              ],
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Base_Url}}/api/bot/users/upsert/",
+              "host": [
+                "{{Base_Url}}"
+              ],
+              "path": [
+                "api",
+                "bot",
+                "users",
+                "upsert",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 28 Jan 2026 18:04:27 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.11.14"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "192"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"telegram_id\": 390421865,\n    \"username\": \"barbodj\",\n    \"first_name\": \"Barbod\",\n    \"user\": null,\n    \"referred_by\": null,\n    \"created_at\": \"2026-01-27T23:27:07.926747Z\",\n    \"updated_at\": \"2026-01-27T23:27:07.935412Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "users/{telegram_id}/status/",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{Base_Url}}/api/bot/users/390421865/status/",
+          "host": [
+            "{{Base_Url}}"
+          ],
+          "path": [
+            "api",
+            "bot",
+            "users",
+            "390421865",
+            "status",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "users/{telegram_id}/status/",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Base_Url}}/api/bot/users/390421865/status/",
+              "host": [
+                "{{Base_Url}}"
+              ],
+              "path": [
+                "api",
+                "bot",
+                "users",
+                "390421865",
+                "status",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 28 Jan 2026 18:06:46 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.11.14"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "96"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"telegram_id\": 390421865,\n    \"created_at\": \"2026-01-27T23:27:07.926747Z\",\n    \"referrer_telegram_id\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "referrals/",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "referrer_telegram_id",
+              "value": "390421865",
+              "type": "text",
+              "uuid": "74c0f11f-9b0e-4223-860a-f7613a9f913f"
+            },
+            {
+              "key": "referred_telegram_id",
+              "value": "92817795",
+              "type": "text",
+              "uuid": "e23c1eac-0063-48c1-8b04-aef37e69a72e"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{Base_Url}}/api/bot/referrals/",
+          "host": [
+            "{{Base_Url}}"
+          ],
+          "path": [
+            "api",
+            "bot",
+            "referrals",
+            ""
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "referrals/",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "referrer_telegram_id",
+                  "value": "390421865",
+                  "type": "text",
+                  "uuid": "74c0f11f-9b0e-4223-860a-f7613a9f913f"
+                },
+                {
+                  "key": "referred_telegram_id",
+                  "value": "92817795",
+                  "type": "text",
+                  "uuid": "e23c1eac-0063-48c1-8b04-aef37e69a72e"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Base_Url}}/api/bot/referrals/",
+              "host": [
+                "{{Base_Url}}"
+              ],
+              "path": [
+                "api",
+                "bot",
+                "referrals",
+                ""
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 28 Jan 2026 18:13:36 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.11.14"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "109"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"referrer_telegram_id\": 390421865,\n    \"referred_telegram_id\": 92817795,\n    \"created_at\": \"2026-01-28T18:11:16.052115Z\"\n}"
+        },
+        {
+          "name": "referrals/",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "referrer_telegram_id",
+                  "value": "390421865",
+                  "type": "text",
+                  "uuid": "74c0f11f-9b0e-4223-860a-f7613a9f913f"
+                },
+                {
+                  "key": "referred_telegram_id",
+                  "value": "92817795",
+                  "type": "text",
+                  "uuid": "e23c1eac-0063-48c1-8b04-aef37e69a72e"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Base_Url}}/api/bot/referrals/",
+              "host": [
+                "{{Base_Url}}"
+              ],
+              "path": [
+                "api",
+                "bot",
+                "referrals",
+                ""
+              ]
+            }
+          },
+          "status": "Conflict",
+          "code": 409,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 28 Jan 2026 18:15:33 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.11.14"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "40"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"detail\": \"User already has a referrer\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "referrals/referrer/{telegram_id}/summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{Base_Url}}/api/bot/referrals/referrer/390421865/summary",
+          "host": [
+            "{{Base_Url}}"
+          ],
+          "path": [
+            "api",
+            "bot",
+            "referrals",
+            "referrer",
+            "390421865",
+            "summary"
+          ],
+          "query": [
+            {
+              "key": "referrer:390421865/summary/",
+              "value": null,
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "eferrals/referrer/{telegram_id}/summary",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Base_Url}}/api/bot/referrals/referrer/390421865/summary",
+              "host": [
+                "{{Base_Url}}"
+              ],
+              "path": [
+                "api",
+                "bot",
+                "referrals",
+                "referrer",
+                "390421865",
+                "summary"
+              ],
+              "query": [
+                {
+                  "key": "referrer:390421865/summary/",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 28 Jan 2026 18:45:05 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.11.14"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "100"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"count\": 1,\n    \"last_5_referrals\": [\n        {\n            \"telegram_id\": 92817795,\n            \"created_at\": \"2026-01-28T18:11:16.052061Z\"\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "Base_Url",
+      "value": ""
+    }
+  ]
+}
