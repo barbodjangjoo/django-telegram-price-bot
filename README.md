@@ -1,20 +1,43 @@
-# Rastad_task-telegram-bot-
+Django Telegram Price Monitor is a Telegram bot created with Django and Celery that is capable of production use. It fetches and posts market prices to a Telegram channel using an external API. Some of the features included are:
 
-- پروژه بات تلگرام به همراه ورکر برای قیمت گیری 
+Integration with Telegrma Bot API
+Price monitoring with Celery
+API failure retry
+Dockerized app
+Separated web, worker, and redis containers
+Environment based configs The tech stack for this app includes the following:
+Django and Django REST Framework
+Celery
+Redis
+Docker and Docker Compose
+Telegram Bot API
 
-- در ابتدا از بات فادر یک توکن دریافت کنید و در .env آن را قرار دهید 
-همچنین برای چنل تلگرام که می خواهید قیمت ها در آن نمایش داده شود می توانید چنل خودتون رو به @get_id_bot معرفی کنید تا چنل آیدی را بدهد
+Architecture
+Telegram User / Channel
+        ↓
+Telegram Bot
+        ↓
+Django API
+        ↓
+Celery Worker
+        ↓
+External Price API
+        ↓
+Database
 
-در مرحله بعد داکر دیمون دستگاه را باز کنید و داخل ترمینال آیدی زمانی که آدرس در فولدر پروژه هست بنویسید
+
+1) Setup & Run
+git clone https://github.com/yourusername/django-telegram-price-monitor.git
+cd django-telegram-price-monitor
+
+2) Create environment file:
+cp .env.example .env
+
+Fill in your Telegram bot token and channel ID.
+3) Build and run containers:
 
 docker-compose up --build
 
-پس از ران شدن کانتینر ها و نصب پکیج ها توسط داکر 
+4)Run migrations:
 
-docker-compose exec web python manage.py migrate 
-
-را بزنید تا جنگو جدول های دیتابیس را برای شما بسازد 
-و شما می توانید از بات و چنل خودتون تست بگیرید(زمانی که این بکند داره کار می کنه
-)
-
-همچنین برای داکیومنت در کنار پروژه برای شما پست من قرار دادم تا هم بادی ریکوئست ها را داشته باشید هم توی روند تست کار را راحت تر کند
+docker-compose exec web python manage.py migrate
