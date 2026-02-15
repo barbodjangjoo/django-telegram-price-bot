@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "6e1ee876-e9fa-4375-90ce-abde8ce6bb30",
-    "name": "Rastad task",
+    "name": "django-telegram-price-bot",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "39331284"
   },
